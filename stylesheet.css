@@ -12,8 +12,14 @@ header {
     display: flex;
     justify-content: space-between;
     padding: 10px;
-    background-color: #7c90ff;
+    background-color: #c9c9c9;
     height: 28px;
+    box-shadow: 2px 0px 20px #0000001a;
+}
+
+picture > img {
+    width: 25px;
+    cursor: pointer;
 }
 
 nav {
@@ -27,18 +33,21 @@ nav {
     cursor: pointer;
 }
 
-.megamenu > a {
+.megamenu > a, nav > div > a {
     display: flex;
     align-items: center;
     gap: 20px;
+    color: #000000;
+    text-decoration: none;
 }
 
-/* .megamenu:hover .submenu {
-    opacity: 1;
-    visibility: visible;
-} */
+.megamenu > a > img {
+    width: 10px;
+    margin-left: -15px;
+}
 
-.submenu > a {
+.submenu > a, .mm, .mm-sub > a {
+    display: block;
     font-size: 14px;
     padding: 12px 20px;
     color: #000000;
@@ -46,14 +55,52 @@ nav {
     transition: all 150ms ease-in-out 100ms;
 }
 
-.submenu > a:hover {
+.submenu a:hover, .mm:hover {
     background-color: #dddddd;
 }
 
 .submenu {
-    padding: 20px 5px;
-    width: 150px;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: 7px;
+    
+}
+
+.submenu, .mm-sub {
+    position: absolute;
+    width: 140px;
     min-height: 80px;
-    background-color: beige;
+    box-shadow: 0px 0px 20px #0000001a;
+    background-color: #c9c9c9;
     border-radius: 6px;
+    transition: opacity 50ms ease-in-out 10ms;
+}
+
+.megamenu:hover .submenu {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mm {
+    position: relative;
+}
+
+.mm > img {
+    width: 10px;
+}
+
+.mm > .mm-sub {
+    left: 140px;
+    visibility: hidden;
+    opacity: 0;
+    margin-top: -31px;
+}
+
+.mm:hover .mm-sub {
+    visibility: visible;
+    opacity: 1;
+}
+
+.mm-sub > a {
+    display: block;
 }
