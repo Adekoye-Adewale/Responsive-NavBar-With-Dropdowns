@@ -1,5 +1,5 @@
 body {
-    max-width: 1440px;
+    width: 100%;
     margin: auto;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
@@ -10,15 +10,24 @@ header {
     position: sticky;
     top: 0;
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 10px;
     background-color: #c9c9c9;
-    height: 28px;
+    height: 50px;
     box-shadow: 2px 0px 20px #0000001a;
 }
 
+@media screen and (max-width: 500px) {
+    nav {
+        display: none !important;
+    }
+
+
+}
+
 picture > img {
-    width: 25px;
+    width: 45px;
     cursor: pointer;
 }
 
@@ -103,4 +112,68 @@ nav {
 
 .mm-sub > a {
     display: block;
+}
+
+.mbtns {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    /* width: 45%; */
+}
+
+.nav-btn {
+    background-color: #002099;
+    padding: 14px 30px;
+    border: solid 1.5px #002099;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #ffffff;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.nav-btn:hover {
+    background-color: #dddddd;
+    color: #002099;
+}
+
+#mobile-menu {
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    #mobile-menu {
+        display: block !important;
+        background-color: red;
+        height: 100%;
+    }
+
+    .hamburger {
+        position: relative;
+        content: "";
+        width: 20px;
+        height: 3px;
+        background-color: red;
+        cursor: pointer;
+    }
+
+    .hamburger::before, .hamburger::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 3px;
+        border-radius: 100px;
+        background-color: red;
+    }
+
+    .hamburger::before {
+        transform: translateY(-7px);
+    }
+
+    .hamburger::after {
+        transform: translateY(7px);
+    }
+
 }
