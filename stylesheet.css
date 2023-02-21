@@ -183,40 +183,33 @@ nav {
         position: absolute;
         left: 5%;
         top: 5%;
-        width: 65vw;
+        width: 95vw;
         list-style: none;
       }
       
-      .m-nav-list li {
+      .m-nav-list .mobile-main-menu, .m-nav-list .mobilesubmenu a {
         transform: translateX(-20px);
         opacity: 0;
         transition: all 0.3s;
       }
       
-      .m-nav-list li:not(:last-child) {
+      .m-nav-list .mobilesubmenu:not(:last-child) {
         margin-bottom: 2em;
       }
       
-      .m-nav-list li a {
-        font-size: 1.4rem;
+      .m-nav-list .mobilesubmenu a {
         text-decoration: none;
-        color: #dddddd;
         position: relative;
+        display: block;
+        color: #6d6d6d;
+        font-size: 1.4rem;
+        margin-block: 20px;
+        transition: all 200ms ease-in-out 100ms;
       }
-      
-      .m-nav-list li a::after {
-        content: "";
-        position: absolute;
-        width: 0;
-        height: 2px;
-        background-color: #dddddd;
-        bottom: 8px;
-        left: 0;
-        transition: all 0.3s;
-      }
-      
-      .m-nav-list li a:hover::after {
-        width: 100%;
+
+      .m-nav-list .mobilesubmenu a:hover {
+        color: #c9c9c9;
+        transform: translateX(10px) !important;
       }
       
       .hamburger.clicked .line {
@@ -239,36 +232,98 @@ nav {
         transform: translateX(0);
       }
       
-      .m-nav.show .m-nav-list li {
+      .m-nav.show .m-nav-list .mobile-main-menu, .m-nav.show .m-nav-list .mobilesubmenu a {
         transform: translateX(0);
         opacity: 1;
         transition-delay: 0.3s;
       }
 
-      .m-submenu > a, .m-submemu > a, .m-mm, .m-mm-sub > a {
-        font-size: 18px !important;
-        color: #ffffff;
-      }
-
-      .m-submenu, .m-mm-sub, .m-submemu > a, .m-mm {
-        display: block;
-        /* justify-content: space-between; */
-        margin-left: 10px;
-      }
-
-      .m-submenu > a, .m-mm, .m-submemu > a {
-        color: #6d6d6d !important;
-        cursor: pointer;
-      }
-
-      .m-mm-sub > a {
-        color: #6d6d6d!important;
-        font-size: 14px !important;
-      }
-
 }
 
-section.1 {
+.mobile-main-menu {
+  background-color: transparent;
+  color: #ffffff;
+  cursor: pointer;
+  width: 70%;
+  padding: 12px 30px;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 1.6rem;
+  transition: 0.3s;
+}
+
+.active, .mobile-main-menu:hover {
+  background-color: #ccc;
+  color: #222222;
+}
+
+.mobilesubmenu {
+  padding: 0 35px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.mobilesubsubmenu {
+  padding: 0 20px;
+  max-height: 0px;
+  color: #222222;
+  overflow: hidden;
+  transition: all 0.2s ease-out;
+}
+
+.mobile-about-submenu {
+  cursor: pointer;
+  width: 100%;
+  margin: auto !important;
+  text-align: left;
+  transition: 0.4s;
+}
+
+.sactive, .mobile-about-submenu:hover {
+  color: #ffffff !important;
+}
+
+/* .mobilesubsubmenu {
+  padding: 0 25px;
+  
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+} */
+
+.mobilesubsubmenu > a {
+  transition: all 150ms ease-in-out 150ms !important;
+}
+
+.mobilesubsubmenu > a:hover {
+  color: #ffffff !important;
+  transform: scale(-0.8);
+}
+
+.one, .two, .three, .four, .five {
+    display: block;
     width: 100%;
-    height:250px
+    height: 250px;
+}
+
+.one {
+  background-color: blue;
+}
+
+.two {
+  background-color: red;
+}
+
+.three {
+  background-color: pink;
+}
+
+.four {
+  background-color: orange;
+}
+
+.five {
+  background-color: red;
 }
