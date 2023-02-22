@@ -4,6 +4,8 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     font-size: 18px;
     scroll-behavior: smooth;
+    display: grid;
+    place-content: center;
 }
 
 header {
@@ -13,8 +15,8 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px;
-    background-color: #c9c9c9;
-    height: 50px;
+    background-color: #000000;
+    min-height: 70px;
     box-shadow: 2px 0px 20px #0000001a;
 }
 
@@ -46,7 +48,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 20px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
 }
 
@@ -59,13 +61,13 @@ nav {
     display: block;
     font-size: 14px;
     padding: 12px 20px;
-    color: #000000;
+    color: #ffffff;
     text-decoration: none;
     transition: all 150ms ease-in-out 100ms;
 }
 
 .submenu a:hover, .mm:hover {
-    background-color: #dddddd;
+    background-color: #222222;
 }
 
 .submenu {
@@ -80,7 +82,7 @@ nav {
     width: 140px;
     min-height: 80px;
     box-shadow: 0px 0px 20px #0000001a;
-    background-color: #c9c9c9;
+    background-color: #000000;
     border-radius: 6px;
     transition: opacity 50ms ease-in-out 10ms;
 }
@@ -122,19 +124,19 @@ nav {
 }
 
 .nav-btn {
-    background-color: #002099;
-    padding: 14px 30px;
-    border: solid 1.5px #002099;
-    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 14px 32px;
+    border: solid 1.5px #ffffff;
+    border-radius: 100px;
     cursor: pointer;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     transition: all 0.3s;
 }
 
 .nav-btn:hover {
-    background-color: #dddddd;
-    color: #002099;
+    background-color: #000000;
+    color: #ffffff;
 }
 
 .hamburger, .m-nav {
@@ -207,7 +209,7 @@ nav {
         transition: all 200ms ease-in-out 100ms;
       }
 
-      .m-nav-list .mobilesubmenu a:hover {
+      .m-nav-list .mobilesubmenu a:hover, .mobile-about-submenu:hover {
         color: #c9c9c9;
         transform: translateX(10px) !important;
       }
@@ -253,36 +255,55 @@ nav {
   transition: 0.3s;
 }
 
-.active, .mobile-main-menu:hover {
+/* .active, .mobile-main-menu:hover {
   background-color: #ccc;
   color: #222222;
-}
+} */
 
 .mobilesubmenu {
   padding: 0 35px;
   max-height: 0;
+  min-height: 0;
   overflow: hidden;
-  transition: max-height 0.2s ease-out;
+  transition: all 0.2s ease-out;
 }
 
 .mobilesubsubmenu {
   padding: 0 20px;
-  max-height: 0px;
+  max-height: 0;
   color: #222222;
   overflow: hidden;
   transition: all 0.2s ease-out;
 }
 
 .mobile-about-submenu {
+  font-size: 1.4rem;
   cursor: pointer;
+  color: #6d6d6d;
   width: 100%;
   margin: auto !important;
   text-align: left;
   transition: 0.4s;
 }
 
-.sactive, .mobile-about-submenu:hover {
-  color: #ffffff !important;
+.mot-box:checked ~ .mobilesubsubmenu {
+  max-height: 150px;
+}
+
+.mot-box, .menu-box1, .menu-box2, .menu-box3 {
+  display: none !important;
+}
+
+.menu-box1:checked ~ .chk1 {
+  max-height: 250px;
+}
+
+.menu-box2:checked ~ .chk2 {
+  max-height: 250px;
+}
+
+.menu-box3:checked ~ .chk3 {
+  max-height: 150px;
 }
 
 /* .mobilesubsubmenu {
@@ -304,16 +325,9 @@ nav {
 
 .one, .two, .three, .four, .five {
     display: block;
-    width: 100%;
-    height: 250px;
-}
-
-.one {
-  background-color: blue;
-}
-
-.two {
-  background-color: red;
+    max-width: 1330px;
+    min-height: 500px;
+    margin: auto;
 }
 
 .three {
@@ -326,4 +340,34 @@ nav {
 
 .five {
   background-color: red;
+}
+
+.pri-btn {
+  color: #ffffff;
+  text-decoration: none;
+  background-color: #000000;
+  border: solid 2px #000000;
+  padding: 14px 31px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.pri-btn:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+.sec-btn {
+  color: #000000;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: solid 2px #000000;
+  padding: 14px 31px;
+  border-radius: 50px;
+  transition: 0.3s;
+}
+
+.sec-btn:hover {
+  background-color: #000000;
+  color: #ffffff;
 }

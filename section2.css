@@ -1,0 +1,13 @@
+.two {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    border-radius: 20px;
+    margin: 10px;
+}
+
+.two .left, .two .right {
+    border-radius: 20px;
+    border: solid 2px #000000;
+    padding: 2% 2% 0px;
+}

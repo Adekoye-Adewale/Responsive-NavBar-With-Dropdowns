@@ -6,40 +6,40 @@ hamburger.addEventListener("click", () => {
   nav.classList.toggle("show");
 });
 
-var acc = document.getElementsByClassName("mobile-main-menu");
-var i;
+// var acc = document.getElementsByClassName("mobile-main-menu");
+// var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var mobilesubmenu = this.nextElementSibling;
-    if (mobilesubmenu.style.maxHeight) {
-      mobilesubmenu.style.maxHeight = null;
-    } else {
-      mobilesubmenu.style.maxHeight = mobilesubmenu.scrollHeight + "px";
-    } 
-  });
-}
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     this.classList.toggle("active");
+//     var mobilesubmenu = this.nextElementSibling;
+//     if (mobilesubmenu.style.minHeight) {
+//       mobilesubmenu.style.minHeight = null;
+//     } else {
+//       mobilesubmenu.style.minHeight = mobilesubmenu.scrollHeight + "px";
+//     } 
+//   });
+// }
 
-var acc = document.getElementsByClassName("mobile-about-submenu");
-var i;
+// var acc = document.getElementsByClassName("mobile-about-submenu");
+// var i;
 
-for (i = 0; i < acc.length; i++) {
-  acc[i].addEventListener("click", function() {
-    this.classList.toggle("sactive");
-    var mobilesubsubmenu = this.nextElementSibling;
-    if (mobilesubsubmenu.style.maxHeight) {
-      mobilesubsubmenu.style.minHeight = null;
-      // mobilesubsubmenu.style.fontSize = null;
-      // mobilesubsubmenu.style.marginTop = null;
-      // mobilesubsubmenu.style.overflow = "hidden";
-      // mobilesubsubmenu.style.lineHeight = null;
-    } else {
-      mobilesubsubmenu.style.minHeight = 150 + "px";
-      // mobilesubsubmenu.style.fontSize = 8 + "px";
-      // mobilesubsubmenu.style.marginTop = -5 + "px";
-      // mobilesubsubmenu.style.overflow = "visible";
-      // mobilesubsubmenu.style.lineHeight = 10 + "px";
-    } 
-  });
-}
+// for (i = 0; i < acc.length; i++) {
+//   acc[i].addEventListener("click", function() {
+//     this.classList.toggle("sactive");
+//     var mobilesubsubmenu = this.nextElementSibling;
+//     if (mobilesubsubmenu.style.maxHeight) {
+//       mobilesubsubmenu.style.maxHeight = null;
+//       // mobilesubsubmenu.style.fontSize = null;
+//       // mobilesubsubmenu.style.marginTop = null;
+//       // mobilesubsubmenu.style.overflow = "hidden";
+//       // mobilesubsubmenu.style.lineHeight = null;
+//     } else {
+//       mobilesubsubmenu.style.maxHeight = mobilesubsubmenu.scrollHeight + "px";
+//       // mobilesubsubmenu.style.fontSize = 8 + "px";
+//       // mobilesubsubmenu.style.marginTop = -5 + "px";
+//       // mobilesubsubmenu.style.overflow = "visible";
+//       // mobilesubsubmenu.style.lineHeight = 10 + "px";
+//     } 
+//   });
+// }
