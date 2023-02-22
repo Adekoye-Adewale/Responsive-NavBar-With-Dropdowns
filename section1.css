@@ -23,6 +23,7 @@
     filter: drop-shadow(6px 2px 10px rgba(0, 0, 0, 0.5));
     display: flex;
     align-self: baseline;
+    z-index: -1;
 }
 
 .one div p {

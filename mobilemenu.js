@@ -1,9 +1,11 @@
 const hamburger = document.querySelector(".hamburger");
 const nav = document.querySelector(".m-nav");
+const logo = document.querySelector(".logo");
 
 hamburger.addEventListener("click", () => {
   hamburger.classList.toggle("clicked");
   nav.classList.toggle("show");
+  logo.classList.toggle("hide");
 });
 
 // var acc = document.getElementsByClassName("mobile-main-menu");
