@@ -9,7 +9,7 @@
 .two .left, .two .right {
     border-radius: 20px;
     border: solid 2px #000000;
-    padding: 2% 2% 0px;
+    padding: 2% 2%;
 }
 
 @media screen and (max-width: 765px) {
