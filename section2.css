@@ -11,3 +11,13 @@
     border: solid 2px #000000;
     padding: 2% 2% 0px;
 }
+
+@media screen and (max-width: 765px) {
+    .two {
+        flex-wrap: wrap;
+    }
+
+    .two .left, .two .right {
+        text-align: center;
+    }
+}
